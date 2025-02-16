@@ -1,46 +1,21 @@
-# Getting Started with Create React App
+# Survey Craft
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+一个使用 React 开发的在线问卷调查应用。
 
-## Available Scripts
+## 项目简介
 
-In the project directory, you can run:
+Survey Craft 是一个现代化的问卷调查平台，让用户能够轻松创建、分享和管理在线问卷。
 
-### `yarn start`
+### 主要功能
+- 直观的问卷设计界面
+- 多种题型支持（单选、多选、填空等）
+- 实时预览功能
+- 问卷数据统计与分析
+- ...
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 技术栈
+- React
+- React Router
+- Redux
+- Ant Design
+- ...
