@@ -14,15 +14,15 @@ type PropsType = {
 
 // FC - functional component
 const QuestionCard: FC<PropsType> = props => {
-  const { id, title, isPublished } = props
+  const { id, title, isPublished, publishQuestion, deleteQuestion } = props
 
-  //   function publish(id: string) {
-  //     publishQuestion && publishQuestion(id)
-  //   }
+  function publish(id: string) {
+    if (publishQuestion) publishQuestion(id)
+  }
 
-  //   function del(id: string) {
-  //     deleteQuestion && deleteQuestion(id)
-  //   }
+  function del(id: string) {
+    if (deleteQuestion) deleteQuestion(id)
+  }
 
   // useEffect(() => {
   //   console.log('question card mounted')
@@ -51,9 +51,9 @@ const QuestionCard: FC<PropsType> = props => {
   //     [publishedClass]: isPublished,
   //   })
 
-  function edit(id: string) {
-    console.log('edit ', id)
-  }
+  //   function edit(id: string) {
+  //     console.log('edit ', id)
+  //   }
 
   return (
     <div key={id} className="list-item">
@@ -64,10 +64,18 @@ const QuestionCard: FC<PropsType> = props => {
       &nbsp;
       <button
         onClick={() => {
-          edit(id)
+          publish(id)
         }}
       >
-        编辑问卷
+        发布问卷
+      </button>
+      &nbsp;
+      <button
+        onClick={() => {
+          del(id)
+        }}
+      >
+        删除问卷
       </button>
     </div>
   )
