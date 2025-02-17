@@ -10,17 +10,17 @@ const List2: FC = () => {
     { id: 'q4', title: '问卷4', isPublished: true },
   ])
 
-  //   function addQuestion() {
-  //     setQuestionList(
-  //       produce(draft => {
-  //         draft.push({
-  //           id: `q${draft.length + 1}`,
-  //           title: `问卷${draft.length + 1}`,
-  //           isPublished: false,
-  //         })
-  //       })
-  //     )
-  //   }
+  function addQuestion() {
+    setQuestionList(
+      produce(draft => {
+        draft.push({
+          id: `q${draft.length + 1}`,
+          title: `问卷${draft.length + 1}`,
+          isPublished: false,
+        })
+      })
+    )
+  }
 
   function deleteQuestion(id: string) {
     // setQuestionList(pre =>
@@ -77,7 +77,7 @@ const List2: FC = () => {
         })}
       </div>
       <div>
-        <button>发布问卷</button>
+        <button onClick={addQuestion}>新增问卷</button>
       </div>
     </>
   )
