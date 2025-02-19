@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
-// import classnames from 'classnames'
-import './QuestionCard.css'
-// import styles from './QuestionCard.module.scss'
+import classnames from 'classnames'
+// import './QuestionCard.css'
+import styles from './QuestionCard.module.scss'
 
 // ts 自定义类型
 type PropsType = {
@@ -38,29 +38,29 @@ const QuestionCard: FC<PropsType> = props => {
   // if (isPublished) itemClassName += ' published'
   // // 逻辑稍微复杂
 
-  // const itemClassName = classnames('list-item', { published: isPublished })
-  // const itemClassName = classnames({
-  //   'list-item': true,
-  //   published: isPublished,
-  // })
-
-  //   const listItemClass = styles['list-item']
-  //   const publishedClass = styles.published
+  //   const itemClassName = classnames('list-item', { published: isPublished })
   //   const itemClassName = classnames({
-  //     [listItemClass]: true,
-  //     [publishedClass]: isPublished,
+  //     'list-item': true,
+  //     published: isPublished,
   //   })
+
+  const listItemClass = styles['list-item']
+  const publishedClass = styles.published
+  const itemClassName = classnames({
+    [listItemClass]: true,
+    [publishedClass]: isPublished,
+  })
 
   //   function edit(id: string) {
   //     console.log('edit ', id)
   //   }
 
   return (
-    <div key={id} className="list-item">
+    <div key={id} className={itemClassName}>
       <strong>{title}</strong>
       &nbsp;
       {/* 条件判断 */}
-      {isPublished ? <span style={{ color: 'green' }}>已发布</span> : <span>未发布</span>}
+      {isPublished ? <span className={styles['published-span']}>已发布</span> : <span>未发布</span>}
       &nbsp;
       <button
         onClick={() => {
